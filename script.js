@@ -46,5 +46,5 @@ document.querySelector(".pbtm")
 })
 
 setBubble();
-// runTimer();
-// getNewHit();
+runTimer();
+getNewHit();

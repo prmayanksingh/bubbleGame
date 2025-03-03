@@ -26,6 +26,7 @@ main .panel {
   color: #fff;
   border-radius: 10px;
   overflow: hidden;
+  position: relative;
 }
 main .panel .ptop {
   width: 100%;
@@ -69,8 +70,8 @@ main .panel .pbtm {
   color: #000;
 }
 main .panel .pbtm .bubble {
-  width: 3.7em;
-  height: 3.7em;
+  width: clamp(3em, 3.5vw, 3.7em);
+  height: clamp(3em, 3.5vw, 3.7em);
   background-color: #496747;
   color: #fff;
   border-radius: 50%;
@@ -81,4 +82,28 @@ main .panel .pbtm .bubble {
 main .panel .pbtm .bubble:hover {
   cursor: pointer;
   background-color: #334a33;
+}
+
+@media (max-width: 800px) {
+  main .panel .ptop {
+    height: 5em;
+    gap: clamp(1em, 6vw, 4em);
+  }
+  main .panel .ptop .elem {
+    gap: 0.5em;
+  }
+  main .panel .ptop .elem h2 {
+    font-size: clamp(0.8em, 2vw, 3em);
+  }
+  main .panel .ptop .elem .box {
+    padding: 4px 8px;
+  }
+  main .panel .pbtm {
+    gap: 0.55em;
+    padding: 1em;
+  }
+  main .panel .pbtm .bubble {
+    width: 2.3em;
+    height: 2.3em;
+  }
 }/*# sourceMappingURL=style.css.map */

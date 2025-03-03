@@ -26,6 +26,7 @@ main {
     color: #fff;
     border-radius: 10px;
     overflow: hidden;
+    position: relative;
 
     .ptop {
       width: 100%;
@@ -73,8 +74,8 @@ main {
       color: #000;
 
       .bubble {
-        width: 3.7em; // use clamp for responsive
-        height: 3.7em; // use clamp for responsive
+        width: clamp(3em, 3.5vw, 3.7em); // use clamp for responsive
+        height: clamp(3em, 3.5vw, 3.7em); // use clamp for responsive
         background-color: #496747;
         color: #fff;
         border-radius: 50%;
@@ -86,6 +87,39 @@ main {
       .bubble:hover {
         cursor: pointer;
         background-color: #334a33;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  main {
+    .panel {
+      .ptop {
+        height: 5em;
+        gap: clamp(1em, 6vw, 4em);
+
+        .elem {
+          gap: 0.5em;
+
+          h2 {
+            font-size: clamp(0.8em, 2vw, 3em);
+          }
+
+          .box {
+            padding: 4px 8px;
+          }
+        }
+      }
+
+      .pbtm {
+        gap: 0.55em;
+        padding: 1em;
+
+        .bubble {
+          width: 2.3em;
+          height: 2.3em;
+        }
       }
     }
   }
